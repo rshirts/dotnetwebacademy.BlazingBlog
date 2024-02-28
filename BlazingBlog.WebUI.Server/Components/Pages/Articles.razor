@@ -21,7 +21,7 @@
 
         // Simulate asynchronous loading to demonstrate streaming rendering
         await Task.Delay(1000);
-        var result = ArticleService.GetAllArticles();
+        var result = await ArticleService.GetAllArticlesAsync();
         if (result is not null)
             articles = result;
     }

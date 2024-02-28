@@ -7,19 +7,15 @@ using System.Threading.Tasks;
 
 namespace BlazingBlog.Application.Articles {
     public class ArticleService : IArticleService {
-        public List<Article> GetAllArticles() {
-            return new List<Article> {
-                new Article {
-                    Id = 1,
-                    Title = "My First article",
-                    Content = "This is my first article"
-                },
-                new Article {
-                    Id = 2,
-                    Title = "My second article",
-                    Content = "This is my second article"
-                }
-            };
+
+        private readonly IArticleRepository _articleRepository;
+
+        public ArticleService(IArticleRepository articleRepository) {
+            _articleRepository = articleRepository;
+        }
+
+        public async Task<List<Article>> GetAllArticlesAsync() {
+            return await _articleRepository.GetAllArticlesAsync();
         }
     }
 }
