@@ -1,5 +1,5 @@
 ﻿@page "/articles"
-@inject IArticleService ArticleService
+@inject ISender Sender
 @attribute [StreamRendering]
 <h3>Articles</h3>
 <PageTitle>Articles</PageTitle>
@@ -20,8 +20,7 @@
     protected override async Task OnInitializedAsync() {
 
         // Simulate asynchronous loading to demonstrate streaming rendering
-        await Task.Delay(1000);
-        var result = await ArticleService.GetAllArticlesAsync();
+        var result = await Sender.Send(new GetArticlesQuery());
         if (result is not null)
             articles = result;
     }

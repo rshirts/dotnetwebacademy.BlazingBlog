@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 namespace BlazingBlog.Application {
     public static class DepenencyInjection {
         public static IServiceCollection AddApplication(this IServiceCollection services) {
-            services.AddScoped<IArticleService, ArticleService>();
+
+            services.AddMediatR(configuration => {
+                configuration.RegisterServicesFromAssembly(typeof(DepenencyInjection).Assembly);
+            });
 
             return services;
         }
