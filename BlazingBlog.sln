@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingBlog.WebUI.Server", "BlazingBlog.WebUI.Server\BlazingBlog.WebUI.Server.csproj", "{5E0833EC-DB85-440C-A029-E40FF55271DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazingBlog.WebUI.Server", "BlazingBlog.WebUI.Server\BlazingBlog.WebUI.Server.csproj", "{5E0833EC-DB85-440C-A029-E40FF55271DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0743C33D-402B-4FD7-BC75-BE7060121255}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingBlog.Domain", "BlazingBlog.Domain\BlazingBlog.Domain.csproj", "{D2E55633-3788-418B-AD25-A7C35A95BFF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazingBlog.Application", "BlazingBlog.Application\BlazingBlog.Application.csproj", "{F5B19295-D59B-4153-ABE7-ECBA30C3B008}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,22 @@ Global
 		{5E0833EC-DB85-440C-A029-E40FF55271DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E0833EC-DB85-440C-A029-E40FF55271DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E0833EC-DB85-440C-A029-E40FF55271DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2E55633-3788-418B-AD25-A7C35A95BFF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2E55633-3788-418B-AD25-A7C35A95BFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2E55633-3788-418B-AD25-A7C35A95BFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2E55633-3788-418B-AD25-A7C35A95BFF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B19295-D59B-4153-ABE7-ECBA30C3B008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B19295-D59B-4153-ABE7-ECBA30C3B008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B19295-D59B-4153-ABE7-ECBA30C3B008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B19295-D59B-4153-ABE7-ECBA30C3B008}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E0833EC-DB85-440C-A029-E40FF55271DD} = {0743C33D-402B-4FD7-BC75-BE7060121255}
+		{D2E55633-3788-418B-AD25-A7C35A95BFF7} = {0743C33D-402B-4FD7-BC75-BE7060121255}
+		{F5B19295-D59B-4153-ABE7-ECBA30C3B008} = {0743C33D-402B-4FD7-BC75-BE7060121255}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4FC778A0-5FC5-42D1-BC5D-C5EFCD3F29ED}
